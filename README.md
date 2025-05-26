@@ -1,5 +1,14 @@
 <h1 align="center">Spotify Stream Automation Bot</h1>
 
+## Project Overview:
+This project automates Spotify streaming actions using stealth techniques, targeting both consultation and hands-on automation with Python. It addresses challenges like consistent playback failures on Spotify Web, bot-detection evasion, and stream legitimacy for royalty generation. The bot is designed for scalability and focuses on mimicking human behavior to bypass Spotify’s anti-bot systems, with an emphasis on mobile/desktop stream optimization over Web-based access.
+
+
+## Core Features:
+- **Stealth Playback Engine:** Handles stream playback issues like "Spotify can't play this right now" with fallback logic.
+- **Royalty-Compliant Streaming Logic:** Focused on IP and timeout strategies that align with Spotify’s detection patterns to maximize legitimate play counts.
+- **Cross-Platform Readiness:** Built to integrate with desktop automation tools (like Appium or Puppeteer) to move beyond web limitations.
+
 <div align="center">
   <img
     src="https://github.com/user-attachments/assets/d200549d-7613-446f-a43b-19a4117ca360"
@@ -62,15 +71,6 @@
 <span>
 
 <div align="left">
-
-## Project Overview:
-This project automates Spotify streaming actions using stealth techniques, targeting both consultation and hands-on automation with Python. It addresses challenges like consistent playback failures on Spotify Web, bot-detection evasion, and stream legitimacy for royalty generation. The bot is designed for scalability and focuses on mimicking human behavior to bypass Spotify’s anti-bot systems, with an emphasis on mobile/desktop stream optimization over Web-based access.
-
-
-## Core Strengths:
-- **Stealth Playback Engine:** Handles stream playback issues like "Spotify can't play this right now" with fallback logic.
-- **Royalty-Compliant Streaming Logic:** Focused on IP and timeout strategies that align with Spotify’s detection patterns to maximize legitimate play counts.
-- **Cross-Platform Readiness:** Built to integrate with desktop automation tools (like Appium or Puppeteer) to move beyond web limitations.
 
 ## Features List:
 | Feature                    | Description                                                              |
