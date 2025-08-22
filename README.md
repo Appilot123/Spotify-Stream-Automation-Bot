@@ -49,12 +49,12 @@
 
 <p align="center">
   <a href="https://www.loom.com/share/a70fddf939af4ee88148f555d5311b34?sid=378cf799-1bda-4df7-8c37-5fb5a0949b9b">
-    <img src="thumbnail.png" alt="Watch a Short Video Demo" width="400" height="225">
+    <img src="thumbnail.png" alt="Watch a Short Video Demo" width="350" height="300">
   </a>
 </p>
 
 
-**For Detailed Demo Watch This Video:**
+**For Detailed Demo Watch These Video:**
 
 **Part 1:**  
 https://www.loom.com/share/ba19ddc5d0594c48a4321f0bf517227d?sid=4fe5594f-eecd-4209-ad2d-2588c42ccd2d  
