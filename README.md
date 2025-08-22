@@ -1,4 +1,4 @@
-# 🎵 Android Spotify Streaming Bot – Private Automation System
+#  Android Spotify Streaming Bot – Private Automation System
 [![Join Discord](https://img.shields.io/badge/Join-Discord-5865F2?logo=discord)](https://discord.gg/vBu9huKBvy)
 [![Contact on Telegram](https://img.shields.io/badge/Contact-Telegram-2CA5E0?logo=telegram)](https://t.me/devpilot1)
 [![Status](https://img.shields.io/badge/Status-Private%20Binary-success)](#)
@@ -8,16 +8,7 @@
 
 ---
 
-## 🚀 Why Choose This Bot?
-- **24/7 Streaming Automation:** 3 batches/day per device for continuous rotation.
-- **Human‑Like Behavior:** Swipes, taps, scrolls, volume nudges, random waits.
-- **Artist Targeting:** Filter by artist/playlist; supports Artist Radio flows.
-- **Multi‑Account Scaling:** ~15 accounts/device using cloned, fingerprint‑spoofed apps.
-- **Full Control:** Web dashboard to start/stop, configure rules, and view logs.
-
----
-
-## ⚡ Features
+##  Features
 - **Batch Scheduling:** 3×8h rotations (5 accounts per batch) with automatic hand‑off.
 - **Session Persistence:** Stable login state and recovery after reboots.
 - **Daily Stream Limits:** Per‑song/account caps; skip/ignore when cap reached.
@@ -32,10 +23,15 @@
 
 ---
 
-## 🖼 Screens & Demo
+##  Screens & Demo
 <p align="center">
   <img src="hero_baner.png" width="850" height="600" alt="Hero"/>
 </p>
+
+ ## Architecture (High-Level)
+  <p align="center">
+  <img src="architecture.png" width="900" alt="Architecture"/>
+  </p>
 
 ## Dashboard
 <p align="center">
@@ -46,11 +42,6 @@
  <p align="center">
   <img src="scheduler.png" width="900" alt="Scheduler"/>
  </p>
-
- ## Architecture (High-Level)
-  <p align="center">
-  <img src="architecture.png" width="900" alt="Architecture"/>
-  </p>
 
 ## 
 <p align="center">
@@ -74,7 +65,15 @@ https://www.loom.com/share/788a03a5c2bf4044b96d54517a5915d1?sid=a9f598d5-3641-46
 
 ---
 
-## 🔍 How It Works (High‑Level)
+##  Why Choose This Bot?
+- **24/7 Streaming Automation:** 3 batches/day per device for continuous rotation.
+- **Human‑Like Behavior:** Swipes, taps, scrolls, volume nudges, random waits.
+- **Artist Targeting:** Filter by artist/playlist; supports Artist Radio flows.
+- **Multi‑Account Scaling:** ~15 accounts/device using cloned, fingerprint‑spoofed apps.
+- **Full Control:** Web dashboard to start/stop, configure rules, and view logs.
+---
+
+##  How It Works (High‑Level)
 1. **Connect Devices & Accounts** — install device agent, add Spotify accounts.
 2. **Set Behavior Rules** — artist filters, stream caps, save %, delays.
 3. **Start Batches** — 3×8h rotation with automatic switching.
@@ -84,7 +83,7 @@ https://www.loom.com/share/788a03a5c2bf4044b96d54517a5915d1?sid=a9f598d5-3641-46
 
 ---
 
-## 🧰 Tech Overview
+##  Tech Overview
 - **Platform:** Physical Android (8.0+). Phone‑farm compatible.
 - **Control:** Web dashboard (backend API + React UI) with device agents.
 - **Automation:** Android accessibility/UI automator & touch injection.
@@ -93,51 +92,15 @@ https://www.loom.com/share/788a03a5c2bf4044b96d54517a5915d1?sid=a9f598d5-3641-46
 
 ---
 
-## 📦 Access & Onboarding
+##  Access & Onboarding
 This is a **private binary** with guided onboarding. Contact us to discuss your use case:
 - [Join Discord](https://discord.gg/vBu9huKBvy)
 - [Message on Telegram](https://t.me/devpilot1)
 
 > Pricing and license options are shared during a call based on scale and support needs.
 
----
 
-## ❓ FAQ
-**Is it open source?**  
-No. This repo provides docs, visuals, and onboarding. Builds are distributed privately.
-
-**How many accounts per device?**  
-Designed for ~15 accounts/device (3 batches × 5 accounts). Configurable.
-
-**Can it run 24/7?**  
-Yes — via scheduled batch rotations and watchdog recovery.
-
-**Is it safe?**  
-We provide throttling, randomized behavior, and per‑account caps to reduce risk. You are responsible for complying with Spotify’s Terms of Service and applicable laws.
-
-**Does it support multiple devices?**  
-Yes — scale horizontally across as many Android phones as you provide.
-
----
-
-## ⚖ Legal
-See [TERMS](./TERMS.md) • [PRIVACY](./PRIVACY.md) • [DISCLAIMER](./DISCLAIMER.md) • [SECURITY](./SECURITY.md)
-
----
-
-## 🗺 Roadmap (Public)
-- Dashboard v2 (bulk presets, templates)
-- Email/Slack notifications
-- Enhanced audit logs & exports
-
----
-
-## 📝 Changelog
-We publish release notes under GitHub **Releases** and mirror key items in [CHANGELOG](./CHANGELOG.md).
-
----
-
-## 📬 Contact
+##  Contact
 [![Join Discord](https://img.shields.io/badge/Join-Discord-5865F2?logo=discord)](https://discord.gg/vBu9huKBvy)  
 [![Contact on Telegram](https://img.shields.io/badge/Contact-Telegram-2CA5E0?logo=telegram)](https://t.me/devpilot1)  
 
