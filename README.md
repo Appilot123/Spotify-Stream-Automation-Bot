@@ -46,7 +46,12 @@
 - **Architecture (High-Level)**  
   <img src="architecture.png" width="900" alt="Architecture"/>
 
-[![Watch a Short Video Demo](thumbnail.png)](https://www.loom.com/share/a70fddf939af4ee88148f555d5311b34?sid=378cf799-1bda-4df7-8c37-5fb5a0949b9b)
+
+<p align="center">
+  <a href="https://www.loom.com/share/a70fddf939af4ee88148f555d5311b34?sid=378cf799-1bda-4df7-8c37-5fb5a0949b9b">
+    <img src="thumbnail.png" alt="Watch a Short Video Demo" width="400" height="225">
+  </a>
+</p>
 
 
 **For Detailed Demo Watch This Video:**
