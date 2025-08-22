@@ -34,19 +34,28 @@
 
 ## 🖼 Screens & Demo
 <p align="center">
-  <img src="hero_baner.png" width="900" alt="Hero"/>
+  <img src="hero_baner.png" width="850" height="600" alt="Hero"/>
 </p>
 
-- **Dashboard**  
+## Dashboard
+<p align="center">
   <img src="dashboard.png" width="900" alt="Dashboard"/>
+</p>
 
-- **Batch Scheduler**  
+## Batch Scheduler 
+ <p align="center">
   <img src="scheduler.png" width="900" alt="Scheduler"/>
+ </p>
 
-- **Architecture (High-Level)**  
+ ## Architecture (High-Level)
+  <p align="center">
   <img src="architecture.png" width="900" alt="Architecture"/>
+  </p>
 
-
+## 
+<p align="center">
+  <strong><span style="font-size:24px;">Watch a Short Video Demo</span></strong>
+</p>
 <p align="center">
   <a href="https://www.loom.com/share/a70fddf939af4ee88148f555d5311b34?sid=378cf799-1bda-4df7-8c37-5fb5a0949b9b">
     <img src="thumbnail.png" alt="Watch a Short Video Demo" width="350" height="300">
