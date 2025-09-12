@@ -28,22 +28,22 @@
 
 ## Screens & Demo
 <p align="center">
-  <img src="hero_baner.png" width="850" height="600" alt="spotify streaming bot android — hero overview of playback automation dashboard"/>
+  <img src="spotify-streaming-bot-hero_baner.png" width="850" height="600" alt="spotify streaming bot android — hero overview of playback automation dashboard"/>
 </p>
 
 ## Architecture (High-Level)
 <p align="center">
-  <img src="architecture.png" width="900" alt="spotify streaming automation architecture — android device agents, scheduler, web dashboard"/>
+  <img src="spotify-streaming-bot-architecture.png" width="900" alt="spotify streaming automation architecture — android device agents, scheduler, web dashboard"/>
 </p>
 
 ## Dashboard
 <p align="center">
-  <img src="dashboard.png" width="900" alt="spotify playlist automation bot — web dashboard for batches, logs, and alerts"/>
+  <img src="spotify-streaming-bot-dashboard.png" width="900" alt="spotify playlist automation bot — web dashboard for batches, logs, and alerts"/>
 </p>
 
 ## Batch Scheduler
 <p align="center">
-  <img src="scheduler.png" width="900" alt="spotify play bot scheduler — 3×8h rotations with multi-account hand-off"/>
+  <img src="spotify-streaming-bot-scheduler.png" width="900" alt="spotify play bot scheduler — 3×8h rotations with multi-account hand-off"/>
 </p>
 
 ---
@@ -51,7 +51,7 @@
 ## 🎥 Video Demo
 <p align="center">
   <a href="https://www.loom.com/share/a70fddf939af4ee88148f555d5311b34?sid=378cf799-1bda-4df7-8c37-5fb5a0949b9b">
-    <img src="thumbnail.png" alt="watch the spotify streaming bot demo for android" width="350" height="300">
+    <img src="spotify-streaming-bot-thumbnail.png" alt="watch the spotify streaming bot demo for android" width="350" height="300">
   </a>
 </p>
 
