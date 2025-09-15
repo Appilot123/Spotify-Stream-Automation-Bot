@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Spotify Streaming Bot automates music plays to help musicians and indie artists grow Spotify streams with multi-account support and proxy integration.">
+    
+    <title>Spotify Streaming Bot – Automate Music Plays & Boost Streams</title>
+    
+    <link rel="canonical" href="https://github.com/Appilot123/Spotify-Streaming-Bot">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Spotify Streaming Bot – Automate Music Plays & Boost Streams">
+    <meta property="og:description" content="Spotify Streaming Bot automates music plays to help musicians and indie artists grow Spotify streams with multi-account support and proxy integration.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://github.com/Appilot123/Spotify-Streaming-Bot">
+    <meta property="og:image" content="https://yourusername.github.io/spotify-streaming-bot/og-image.jpg">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Spotify Streaming Bot – Automate Music Plays & Boost Streams">
+    <meta name="twitter:description" content="Spotify Streaming Bot automates music plays to help musicians and indie artists grow Spotify streams with multi-account support and proxy integration.">
+    <meta name="twitter:image" content="https://yourusername.github.io/spotify-streaming-bot/twitter-image.jpg">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Spotify Streaming Bot",
+      "operatingSystem": "Windows, Linux, macOS",
+      "applicationCategory": "Automation",
+      "description": "Spotify Streaming Bot automates music plays to help musicians and providers grow listens on Spotify.",
+      "softwareVersion": "1.0",
+      "author": {
+        "@type": "Organization",
+        "name": "Bitbash"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "keywords": "spotify bot, spotify streaming bot, music automation, spotify automation, grow spotify streams",
+      "url": "https://github.com/Appilot123/Spotify-Streaming-Bot"
+    }
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0a0a0a;
+            color: #ffffff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #1db954, #1ed760);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+        
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #000;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: #000;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 50% 50%, rgba(29, 185, 84, 0.1) 0%, transparent 50%);
+            z-index: 1;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #1db954, #1ed760);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 800;
+        }
+        
+        .hero-description {
+            font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+            margin-bottom: 40px;
+            color: #b3b3b3;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-button {
+            background: linear-gradient(45deg, #1db954, #1ed760);
+            color: #000;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 10px 30px rgba(29, 185, 84, 0.3);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 40px rgba(29, 185, 84, 0.4);
+        }
+        
+        /* Section Styles */
+        .section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            font-size: clamp(2rem, 4vw, 2.5rem);
+            text-align: center;
+            margin-bottom: 60px;
+            color: #1db954;
+            font-weight: 700;
+        }
+        
+        /* Features Section */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .feature-card {
+            background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid #333;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #1db954, #1ed760);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #1db954;
+        }
+        
+        .feature-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: #fff;
+            font-weight: 600;
+        }
+        
+        .feature-description {
+            color: #b3b3b3;
+            line-height: 1.6;
+        }
+        
+        /* Use Cases */
+        .use-cases {
+            background: linear-gradient(135deg, #111, #222);
+        }
+        
+        .use-case-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .use-case {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 30px;
+            border-radius: 15px;
+            border-left: 4px solid #1db954;
+        }
+        
+        .use-case h3 {
+            color: #1db954;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+        
+        /* Installation Section */
+        .installation {
+            background: #0a0a0a;
+        }
+        
+        .code-block {
+            background: #1a1a1a;
+            padding: 30px;
+            border-radius: 10px;
+            border: 1px solid #333;
+            margin: 30px 0;
+            position: relative;
+            overflow-x: auto;
+        }
+        
+        .code-block pre {
+            color: #1db954;
+            font-family: 'Monaco', 'Menlo', monospace;
+            font-size: 0.9rem;
+            white-space: pre-wrap;
+        }
+        
+        .copy-button {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #1db954;
+            color: #000;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        /* FAQ Section */
+        .faq {
+            background: linear-gradient(135deg, #111, #1a1a1a);
+        }
+        
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            background: rgba(255, 255, 255, 0.05);
+            margin-bottom: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            background: none;
+            border: none;
+            color: #fff;
+            padding: 25px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            text-align: left;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s ease;
+        }
+        
+        .faq-question:hover {
+            background: rgba(29, 185, 84, 0.1);
+        }
+        
+        .faq-answer {
+            padding: 0 25px 25px;
+            color: #b3b3b3;
+            line-height: 1.6;
+            display: none;
+        }
+        
+        .faq-answer.active {
+            display: block;
+        }
+        
+        .faq-icon {
+            transition: transform 0.3s ease;
+        }
+        
+        .faq-icon.active {
+            transform: rotate(45deg);
+        }
+        
+        /* Contact Section */
+        .contact {
+            background: #0a0a0a;
+            text-align: center;
+        }
+        
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+        
+        .contact-link {
+            background: linear-gradient(45deg, #1a1a1a, #2a2a2a);
+            color: #1db954;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 10px;
+            border: 1px solid #333;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+        
+        .contact-link:hover {
+            background: linear-gradient(45deg, #1db954, #1ed760);
+            color: #000;
+            transform: translateY(-2px);
+        }
+        
+        /* Footer */
+        .footer {
+            background: #000;
+            padding: 30px 0;
+            text-align: center;
+            color: #666;
+            border-top: 1px solid #333;
+        }
+        
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero {
+                padding: 60px 0;
+            }
+            
+            .section {
+                padding: 60px 0;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .use-case-list {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-links {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .code-block {
+                padding: 20px;
+            }
+            
+            .copy-button {
+                position: static;
+                margin-top: 15px;
+                width: 100%;
+            }
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .fade-in-up {
+            animation: fadeInUp 0.6s ease forwards;
+        }
+        
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Loading optimization */
+        img {
+            loading: lazy;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <div class="logo">🎵 Spotify Bot</div>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#installation">Installation</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>Spotify Streaming Bot</h1>
+            <p class="hero-description">
+                Automate music plays and boost your Spotify streams with advanced multi-account support, proxy integration, and device emulation for musicians and indie artists.
+            </p>
+            <a href="https://github.com/Appilot123/Spotify-Streaming-Bot" class="cta-button" target="_blank" rel="noopener">
+                🚀 Try on GitHub
+            </a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="section">
+        <div class="container">
+            <h2 class="section-title">Powerful Automation Features</h2>
+            <div class="features-grid">
+                <div class="feature-card fade-in-up">
+                    <div class="feature-icon">🤖</div>
+                    <h3 class="feature-title">Automated Streaming</h3>
+                    <p class="feature-description">
+                        Intelligent bot system that automatically plays your music tracks on Spotify, simulating real user behavior with customizable play patterns and timing intervals.
+                    </p>
+                </div>
+                
+                <div class="feature-card fade-in-up">
+                    <div class="feature-icon">👥</div>
+                    <h3 class="feature-title">Multi-Account Support</h3>
+                    <p class="feature-description">
+                        Manage multiple Spotify accounts simultaneously to maximize your streaming potential while maintaining account safety with built-in rotation and cooldown systems.
+                    </p>
+                </div>
+                
+                <div class="feature-card fade-in-up">
+                    <div class="feature-icon">🌐</div>
+                    <h3 class="feature-title">Proxy Integration</h3>
+                    <p class="feature-description">
+                        Full proxy support with HTTP/HTTPS and SOCKS protocols to ensure anonymity and bypass geographical restrictions for global streaming campaigns.
+                    </p>
+                </div>
+                
+                <div class="feature-card fade-in-up">
+                    <div class="feature-icon">📱</div>
+                    <h3 class="feature-title">Device Emulation</h3>
+                    <p class="feature-description">
+                        Advanced device fingerprinting and emulation capabilities that mimic real mobile and desktop devices for authentic streaming patterns.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases Section -->
+    <section class="section use-cases">
+        <div class="container">
+            <h2 class="section-title">Perfect For</h2>
+            <div class="use-case-list">
+                <div class="use-case">
+                    <h3>🎤 Indie Artists Growing Exposure</h3>
+                    <p>Boost your music visibility on Spotify playlists and algorithm recommendations. Increase your monthly listeners and get discovered by new audiences organically.</p>
+                </div>
+                
+                <div class="use-case">
+                    <h3>📋 Playlist Curators Testing Campaigns</h3>
+                    <p>Test and validate playlist performance, analyze track engagement, and optimize your curation strategy with detailed streaming analytics and automation.</p>
+                </div>
+                
+                <div class="use-case">
+                    <h3>💻 Developers Integrating Music Automation</h3>
+                    <p>Build custom music promotion tools, integrate streaming automation into your applications, and develop scalable solutions for music marketing campaigns.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Installation Section -->
+    <section id="installation" class="section installation">
+        <div class="container">
+            <h2 class="section-title">Quick Installation Guide</h2>
+            <p style="text-align: center; color: #b3b3b3; margin-bottom: 30px;">
+                Get started with Spotify streaming automation in just a few simple steps:
+            </p>
+            
+            <div class="code-block">
+                <button class="copy-button" onclick="copyToClipboard()">Copy Code</button>
+                <pre id="install-code"># Clone the repository
+git clone https://github.com/Appilot123/Spotify-Streaming-Bot.git
+cd Spotify-Streaming-Bot
+
+# Install dependencies
+npm install
+
+# Configure your settings
+cp config.example.json config.json
+
+# Run the bot
+npm start</pre>
+            </div>
+            
+            <p style="text-align: center; color: #b3b3b3; margin-top: 30px;">
+                📖 For detailed setup instructions, visit our <a href="https://github.com/Appilot123/Spotify-Streaming-Bot/blob/main/README.md" style="color: #1db954; text-decoration: none;">comprehensive documentation</a>.
+            </p>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section faq">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        Is this bot safe to use with my Spotify account?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        The bot includes built-in safety measures like request throttling, randomized delays, and user-agent rotation to minimize detection risks. However, always use responsibly and comply with Spotify's terms of service.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        How does this comply with Spotify's terms of service?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        This tool is designed for educational and testing purposes. Users are responsible for ensuring their usage complies with Spotify's terms of service and applicable laws in their jurisdiction.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        Can I use this for commercial music promotion?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        While the bot can automate streaming, we recommend using it ethically and transparently. Consider it as a tool for testing and development rather than for artificial inflation of streaming numbers.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        What operating systems are supported?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        The Spotify Streaming Bot is cross-platform and works on Windows, macOS, and Linux systems. Node.js 14 or higher is required for optimal performance.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <h2 class="section-title">Join Our Community</h2>
+            <p style="color: #b3b3b3; margin-bottom: 40px;">
+                Connect with other developers, get support, and stay updated with the latest features.
+            </p>
+            <div class="contact-links">
+                <a href="https://github.com/Appilot123/Spotify-Streaming-Bot" class="contact-link" target="_blank" rel="noopener">
+                    📂 GitHub Repository
+                </a>
+                <a href="https://discord.gg/Hr9aQGxb" class="contact-link" target="_blank" rel="noopener">
+                    🎮 Discord Server
+                </a>
+                <a href="https://t.me/devpilot" class="contact-link" target="_blank" rel="noopener">
+                    📱 Telegram @devpilot
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Spotify Streaming Bot by Bitbash. Educational use only. Not affiliated with <a href="https://spotify.com" rel="nofollow" style="color: #1db954;">Spotify</a>.</p>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Toggle Functionality
+        function toggleFAQ(button) {
+            const answer = button.nextElementSibling;
+            const icon = button.querySelector('.faq-icon');
+            
+            // Close all other FAQ items
+            document.querySelectorAll('.faq-answer').forEach(item => {
+                if (item !== answer) {
+                    item.classList.remove('active');
+                    item.parentElement.querySelector('.faq-icon').textContent = '+';
+                    item.parentElement.querySelector('.faq-icon').classList.remove('active');
+                }
+            });
+            
+            // Toggle current FAQ item
+            answer.classList.toggle('active');
+            if (answer.classList.contains('active')) {
+                icon.textContent = '×';
+                icon.classList.add('active');
+            } else {
+                icon.textContent = '+';
+                icon.classList.remove('active');
+            }
+        }
+        
+        // Copy to Clipboard Functionality
+        function copyToClipboard() {
+            const code = document.getElementById('install-code').textContent;
+            navigator.clipboard.writeText(code).then(() => {
+                const button = document.querySelector('.copy-button');
+                const originalText = button.textContent;
+                button.textContent = 'Copied!';
+                button.style.background = '#1ed760';
+                setTimeout(() => {
+                    button.textContent = originalText;
+                    button.style.background = '#1db954';
+                }, 2000);
+            });
+        }
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        // Observe feature cards
+        document.querySelectorAll('.feature-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+        
+        // Performance optimization: Defer non-critical JavaScript
+        window.addEventListener('load', () => {
+            // Add any additional load-dependent functionality here
+            console.log('Spotify Streaming Bot page loaded successfully');
+        });
+    </script>
+</body>
+</html>
