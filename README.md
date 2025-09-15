@@ -101,6 +101,8 @@ This is a **private binary** with guided onboarding. Share your use case and sca
 
 - [Join Discord](https://discord.gg/vBu9huKBvy)  
 - [Message on Telegram](https://t.me/devpilot1)
+- [Visit the Website](https://appilot123.github.io/Spotify-Streaming-Bot/)
+
 
 > Pricing and licensing are discussed during a call based on device count, support needs, and SLAs.
 
