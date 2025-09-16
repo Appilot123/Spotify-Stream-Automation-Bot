@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://appilot123.github.io/Spotify-Streaming-Bot/sitemap.xml
